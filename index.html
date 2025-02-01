@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de Archivos TXT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Formulario de inicio de sesión -->
+    <div id="login-section">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" placeholder="Ingresa cualquier usuario" required>
+            <br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Ingresa la contraseña" required>
+            <br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="login-message" style="color: red;"></p>
+    </div>
+
+    <!-- Contenido principal (oculto inicialmente) -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Divisor de Archivos TXT</h1>
+            <p>Una aplicación simple para dividir archivos de texto en partes más pequeñas.</p>
+        </header>
+
+        <section id="features">
+            <h2>Características</h2>
+            <ul>
+                <li>Divide archivos TXT en partes más pequeñas.</li>
+                <li>Configura el número de líneas por archivo.</li>
+                <li>Descarga los archivos resultantes fácilmente.</li>
+            </ul>
+        </section>
+
+        <section id="upload-section">
+            <h2>Sube tu archivo TXT</h2>
+            <input type="file" id="file-input" accept=".txt">
+            <label for="lines">Líneas por archivo:</label>
+            <input type="number" id="lines" min="1" value="100">
+            <button onclick="splitFile()">Dividir Archivo</button>
+        </section>
+
+        <section id="output-section">
+            <h2>Archivos Generados</h2>
+            <div id="file-list"></div>
+        </section>
+
+        <footer>
+            <!-- Footer vacío -->
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
